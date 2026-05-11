@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bloomerry — Let's Bloom Every Day</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Paytone+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="bloomerry.css">
+</head>
+<body>
+
+<!-- ─── NAVBAR ─── -->
+<nav>
+  <div class="nav-logo">
+    <img src="./foto/LOGOBLOOM.jpg" alt="Bloomerry">
+  </div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#bestseller">Best Seller</a></li>
+    <li><a href="#katalog">Katalog</a></li>
+    <li><a href="#order">Cara Order</a></li>
+    <li><a href="#testimoni">Testimoni</a></li>
+    <li><a href="" class="nav-wa" target="_blank">💬 Order WA</a></li>
+  </ul>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section id="home">
+  <div class="hero-text">
+    <div class="hero-tag">🌸 Florist & Gift Specialist — Bogor</div>
+    <h1 class="hero-title">Hadiah cantik<br>buat momen<br><span>paling berharga</span></h1>
+    <p class="hero-sub">Dari buket bunga segar, money bouquet, hingga gift & souvenir — semua dibuat dengan cinta untuk momen spesialmu.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/6281515695526" class="btn-pink" target="_blank">💬 Order Sekarang</a>
+      <a href="#katalog" class="btn-outline-pink">🌷 Lihat Katalog</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-img-wrap">
+      <span class="hero-img-placeholder">💐</span>
+    </div>
+    <div class="hero-badge hero-badge-1">🌸 Fresh & Custom!</div>
+    <div class="hero-badge hero-badge-2">🚚 Delivery</div>
+  </div>
+</section>
+
+<!-- ─── INFO STRIP ─── -->
+<div class="info-strip">
+  <div class="istrip">📍 Bogor, Jawa Barat</div>
+  <div class="istrip">🕐 Senin–Minggu 09.00–18.00</div>
+  <div class="istrip">📲 0815-1659-5526</div>
+  <div class="istrip">🚚 Antar area Bogor & sekitar</div>
+</div>
+
+<!-- ─── WHY BLOOMERRY ─── -->
+<section id="why">
+  <div style="text-align:center">
+    <div class="sec-label">Kenapa Bloomerry?</div>
+    <h2 class="sec-title">Dibuat dengan <span>cinta</span> 🌸</h2>
+  </div>
+  <div class="why-grid" style="margin-top:3rem">
+    <div class="why-card">
+      <div class="why-icon">🌺</div>
+      <h4>Fresh & Berkualitas</h4>
+      <p>Bunga segar pilihan yang tahan lama, dipilih langsung dengan teliti setiap harinya.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">✨</div>
+      <h4>Bisa Custom</h4>
+      <p>Warna, ukuran, dan konsep bisa disesuaikan dengan kebutuhan dan budget kamu.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🚀</div>
+      <h4>Pengiriman Cepat</h4>
+      <p>Delivery untuk area Bogor. Order sebelum jam 18.00</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">💬</div>
+      <h4>Respon Cepat & Ramah</h4>
+      <p>Tim kami siap membantu dari konsultasi sampai produk sampai di tanganmu.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── BEST SELLER ─── -->
+<section id="bestseller">
+  <div class="bs-head">
+    <div>
+      <div class="sec-label">Paling Diminati</div>
+      <h2 class="sec-title">Best <span>Seller</span> 🔥</h2>
+    </div>
+    <a href="#katalog" class="btn-outline-pink">Lihat Semua →</a>
+  </div>
+  <div class="bs-grid">
+
+    <!-- Best Seller 1 -->
+    <div class="prod-card" onclick="openModal(
+      'Pipe Flower Pastel',
+      'Pipe Flower',
+      'Rp 150.000',
+      '🌸',
+      'Buket pipe flower dengan warna-warna pastel yang lembut dan estetik. Cocok untuk wisuda, ulang tahun, maupun anniversary.',
+      '0 cm', 'Hirzi', 'Hirzi', 'Hirzi'
+    )">
+      <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
+        <!-- <img src=".foto/pipe-pastel.jpg" alt="Pipe Flower Pastel"> -->
+        <div class="prod-img-placeholder"><small>Tanya orgnya dulu</small></div>
+        <div class="prod-badge">🔥 Best</div>
+      </div>
+      <div class="prod-info">
+        <div class="prod-cat">Pipe Flower</div>
+        <div class="prod-name">Pipe Flower Pastel</div>
+        <div class="prod-footer">
+          <div class="prod-price">Rp 150.000.000</div>
+          <div class="prod-cta">Lihat detail →</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Best Seller 2 -->
+    <div class="prod-card" onclick="openModal(
+      'Money Bouquet Premium',
+      'Money Bouquet',
+      'Rp 250.000',
+      '💸',
+      'Buket uang yang disusun rapi dan cantik dengan hiasan bunga dan ribbon. Hadiah yang praktis sekaligus estetik!',
+      '0 cm', 'Hirzi', 'Hirzi', 'Hirzi'
+    )">
+      <div class="prod-img" style="background:linear-gradient(135deg,#FFF0B3,#FFE066)">
+        <!-- <img src="./produk/money-bouquet.jpg" alt="Money Bouquet"> -->
+        <div class="prod-img-placeholder"><small>Hirzi</small></div>
+        <div class="prod-badge">⭐ Fav</div>
+      </div>
+      <div class="prod-info">
+        <div class="prod-cat">Money Bouquet</div>
+        <div class="prod-name">Money Bouquet Premium</div>
+        <div class="prod-footer">
+          <div class="prod-price">Rp 0</div>
+          <div class="prod-cta">Lihat detail →</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── KATALOG ─── -->
+<section id="katalog">
+  <div class="sec-label">Koleksi Lengkap</div>
+  <h2 class="sec-title">Katalog <span>Produk</span> 🌷</h2>
+  <div class="cat-tabs">
+    <button class="cat-tab active" onclick="filterKat('semua',this)">Semua</button>
+    <button class="cat-tab" onclick="filterKat('pipe',this)">🌸 Pipe Flower</button>
+    <button class="cat-tab" onclick="filterKat('fresh',this)">🌼 Fresh Bouquet</button>
+    <button class="cat-tab" onclick="filterKat('money',this)">💸 Money Bouquet</button>
+    <button class="cat-tab" onclick="filterKat('artificial',this)">🪷 Artificial</button>
+    <button class="cat-tab" onclick="filterKat('custom',this)">✨ Custom</button>
+    <button class="cat-tab" onclick="filterKat('gift',this)">🎁 Gift & Souvenir</button>
+  </div>
+  <div class="katalog-grid" id="katGrid">
+
+    <!-- ── PIPE FLOWER ── -->
+    <div class="prod-card" data-cat="pipe" onclick="openModal(
+      'Pipe Flower',
+      'Pipe Flower',
+      'Hubungi kami',
+      './foto/PIPE FLOWER.jpg',
+      'Rangkaian buket pipe flower cantik dengan berbagai pilihan warna. Bisa disesuaikan dengan tema momen kamu.'
+    )">
+      <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
+        <img src="./foto/PIPE FLOWER.jpg" alt="Pipe Flower">
+        <div class="prod-img-placeholder"><small></small></div>
+      </div>
+      <div class="prod-info">
+        <div class="prod-cat">Pipe Flower</div>
+        <div class="prod-name">Pipe Flower</div>
+        <div class="prod-footer"><div class="prod-price">Rp 0</div><div class="prod-cta">Detail →</div></div>
+      </div>
+    </div>
+
+    <!-- ── FRESH BOUQUET ── -->
+    <div class="prod-card" data-cat="fresh" onclick="openModal('Fresh Bouquet','Fresh Bouquet','Hubungi kami','🌹','Buket bunga segar pilihan yang harum dan tahan lama. Cocok untuk kado ulang tahun, anniversary, maupun wisuda.')">
+      <div class="prod-img" style="background:linear-gradient(135deg,#FFD6D6,#FFB3B3)">
+        <!-- <img src="fresh.jpg" alt="Fresh Bouquet"> -->
+        <div class="prod-img-placeholder">🌹<small>Gk nemu</small></div>
+      </div>
+      <div class="prod-info">
+        <div class="prod-cat">Fresh Bouquet</div>
+        <div class="prod-name">Fresh Bouquet</div>
+        <div class="prod-footer"><div class="prod-price">Rp 0</div><div class="prod-cta">Detail →</div></div>
+      </div>
+    </div>
+
+    <!-- ── MONEY BOUQUET ── -->
+    <div class="prod-card" data-cat="money" onclick="openModal('Money Bouquet','Money Bouquet','Hubungi kami','./foto/money bouquet.jpg','Buket uang yang disusun cantik dan rapi. Isi uang bisa disesuaikan. Hadiah yang praktis sekaligus estetik!')">
+      <div class="prod-img" style="background:linear-gradient(135deg,#FFF3CC,#FFE580)">
+        <img src="./foto/money bouquet.jpg" alt="Money Bouquet">
+        <div class="prod-img-placeholder"><small></small></div>
+      </div>
+      <div class="prod-info">
+        <div class="prod-cat">Money Bouquet</div>
+        <div class="prod-name">Money Bouquet</div>
+        <div class="prod-footer"><div class="prod-price">Rp 0</div><div class="prod-cta">Detail →</div></div>
+      </div>
+    </div>
+
+    <!-- ── ARTIFICIAL BOUQUET ── -->
+    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/artificial bouquet.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
+      <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
+        <img src="./foto/artificial bouquet.jpg" alt="Artificial Bouquet">
+        <div class="prod-img-placeholder"><small></small></div>
+      </div>
+      <div class="prod-info">
+        <div class="prod-cat">Artificial Bouquet</div>
+        <div class="prod-name">Artificial Bouquet</div>
+        <div class="prod-footer"><div class="prod-price">Rp 0</div><div class="prod-cta">Detail →</div></div>
+      </div>
+    </div>
+
+    <!-- ── CUSTOM BOUQUET ── -->
+    <div class="prod-card" data-cat="custom" onclick="openModal('Custom Bouquet','Custom Bouquet','Hubungi kami','./foto/custom bouquet.jpg','Mau konsep unik? Kita bisa buat sesuai keinginan kamu! Ceritakan tema, warna favorit, dan budget-mu.')">
+      <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FF99CC)">
+        <img src="./foto/custom bouquet.jpg" alt="Custom Bouquet">
+        <div class="prod-img-placeholder"><small></small></div>
+      </div>
+      <div class="prod-info">
+        <div class="prod-cat">Custom Bouquet</div>
+        <div class="prod-name">Custom Bouquet</div>
+        <div class="prod-footer"><div class="prod-price">Hubungi kami</div><div class="prod-cta">Detail →</div></div>
+      </div>
+    </div>
+
+    <!-- ── GIFT & SOUVENIR ── -->
+    <div class="prod-card" data-cat="gift" onclick="openModal('Gift & Souvenir','Gift & Souvenir','Hubungi kami','🎁','Berbagai pilihan gift box dan souvenir cantik untuk melengkapi momen spesialmu. Bisa custom sesuai kebutuhan.')">
+      <div class="prod-img" style="background:linear-gradient(135deg,#FFE0B3,#FFD080)">
+        <img src="./foto/gift.jpg" alt="Gift & Souvenir">
+        <div class="prod-img-placeholder"><small></small></div>
+      </div>
+      <div class="prod-info">
+        <div class="prod-cat">Gift & Souvenir</div>
+        <div class="prod-name">Gift & Souvenir</div>
+        <div class="prod-footer"><div class="prod-price">Hubungi kami</div><div class="prod-cta">Detail →</div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── CARA ORDER ─── -->
+<section id="order">
+  <div class="sec-label">Mudah Banget!</div>
+  <h2 class="sec-title">Cara <span>Order</span> 💬</h2>
+  <div class="order-wrap">
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <h4>Pilih Produk</h4>
+          <p>Lihat katalog kami dan tentukan produk yang kamu mau. Bisa juga cerita dulu konsep yang diinginkan!</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <h4>Chat via WhatsApp</h4>
+          <p>Hubungi kami via WA, sebutkan nama produk, ukuran, warna, dan tanggal dibutuhkan.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <h4>Konfirmasi & Bayar</h4>
+          <p>Kami kirim total harga + rekening. Pembayaran bisa transfer bank atau e-wallet.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div>
+          <h4>Proses & Pengiriman</h4>
+          <p>Pesanan diproses, kita kirim foto produk sebelum diantar. Siap-siap surprise-in orang tersayang!</p>
+        </div>
+      </div>
+    </div>
+    <div class="order-cta">
+      <div class="big-emoji">💐</div>
+      <h3>Yuk Order Sekarang!</h3>
+      <p>Respon cepat & friendly!<br>⏰ Layanan: 09.00–18.00 WIB<br>📅 Senin – Minggu</p>
+      <a href="https://wa.me/6281515695526" class="wa-btn" target="_blank">
+        💬 Chat WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TESTIMONI ─── -->
+<section id="testimoni">
+  <div style="text-align:center">
+    <div class="sec-label">Kata Mereka</div>
+    <h2 class="sec-title">Testimoni <span>Pelanggan</span> 💬</h2>
+  </div>
+  <div class="testi-grid">
+
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"🔥🔥"</p>
+      <div class="testi-author">
+        <div class="testi-avatar">👩</div>
+        <div>
+          <div class="testi-name">Hirzi</div>
+          <div class="testi-occasion">Produk • Bulan Tahun</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Wow"</p>
+      <div class="testi-author">
+        <div class="testi-avatar">👩</div>
+        <div>
+          <div class="testi-name">Hirzi</div>
+          <div class="testi-occasion">Produk • Bulan Tahun</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Rekomen"</p>
+      <div class="testi-author">
+        <div class="testi-avatar">👨</div>
+        <div>
+          <div class="testi-name">Hirzi</div>
+          <div class="testi-occasion">Produk • Bulan Tahun</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── LOKASI & SOSMED ─── -->
+<section id="lokasi">
+  <div class="sec-label">Temukan Kami</div>
+  <h2 class="sec-title">Lokasi & <span>Sosmed</span> 📍</h2>
+  <div class="lokasi-wrap">
+    <div class="map-box">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.4441091758513!2d106.80846749999999!3d-6.591592299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c50051659483%3A0x81ebea5be0f860b8!2sBloomerry.flo%20buket%20bunga%20dan%20gift%20bogor!5e0!3m2!1sen!2sid!4v1777135741538!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="lokasi-info">
+      <div class="loc-card">
+        <div class="loc-icon">📍</div>
+        <div class="loc-text">
+          <h4>Alamat Toko</h4>
+          <p>Jl. Sancang No.22, RT.03/RW.07<br>Babakan, Kec. Bogor Tengah<br>Kota Bogor, Jawa Barat 16128</p>
+        </div>
+      </div>
+      <div class="loc-card">
+        <div class="loc-icon">🕐</div>
+        <div class="loc-text">
+          <h4>Jam Buka</h4>
+          <p>Senin – Minggu: 09.00 – 18.00</p>
+        </div>
+      </div>
+      <div class="loc-card">
+        <div class="loc-icon">🚚</div>
+        <div class="loc-text">
+          <h4>Area Pengiriman</h4>
+          <p>Bogor<br>Delivery: order sebelum 18.00 WIB</p>
+        </div>
+      </div>
+      <div class="loc-card">
+        <div class="loc-icon">📱</div>
+        <div class="loc-text">
+          <h4>Ikuti Bloomerry</h4>
+          <div class="sosmed-row">
+            <a href="https://instagram.com/bloomerry.flo" class="sosmed-btn s-ig" target="_blank">📸 Instagram</a>
+            <a href="https://tiktok.com/bloomerry.flo" class="sosmed-btn s-tt" target="_blank">🎵 TikTok</a>
+            <a href="https://wa.me/6281515695526" class="sosmed-btn s-wa" target="_blank">💬 WA</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <p>© 2026 <span>Bloomerry</span> — Let's Bloom Every Day 🌸<br>
+  Bogor, Jawa Barat</p>
+</footer>
+
+<!-- ─── MODAL DETAIL PRODUK ─── -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModalDirect()">✕</button>
+    <div class="modal-img" id="mImg"></div>
+    <div class="modal-cat" id="mCat"></div>
+    <div class="modal-title" id="mTitle"></div>
+    <div class="modal-price" id="mPrice"></div>
+    <div class="modal-desc" id="mDesc"></div>
+    <div class="modal-specs" id="mSpecs" style="display:none"></div>
+    <a href="#" class="modal-wa" id="mWa" target="_blank">💬 Order via WhatsApp</a>
+  </div>
+</div>
+
+<script src="bloomerry.js"></script>
+</body>
+</html>

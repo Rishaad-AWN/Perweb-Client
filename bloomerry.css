@@ -15,7 +15,7 @@ body { font-family:'Nunito',sans-serif; background:var(--pink-pale); color:var(-
 /* ─── NAVBAR ─── */
 nav {
   position:fixed; top:0; width:100%; z-index:999;
-  background:rgba(255,240,248,0.92); backdrop-filter:blur(14px);
+  background:rgba(255, 234, 251); backdrop-filter:blur(4px);
   border-bottom:2px solid var(--pink-light);
   display:flex; justify-content:space-between; align-items:center;
   padding:0.8rem 4rem; height:64px; overflow:visible;

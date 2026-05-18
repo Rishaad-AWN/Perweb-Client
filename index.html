@@ -12,17 +12,25 @@
 <!-- ─── NAVBAR ─── -->
 <nav>
   <div class="nav-logo">
-    <img src="./foto/logo bloom cirlce.png" alt="Bloomerry"></span>
+    <img src="./foto/Logo/logo bloom cirlce.png" alt="Bloomerry"></span>
   </div>
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#bestseller">Best Seller</a></li>
-    <li><a href="#katalog">Katalog</a></li>
-    <li><a href="#order">Cara Order</a></li>
-    <li><a href="#testimoni">Testimoni</a></li>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" onclick="closeNav()">Home</a></li>
+    <li><a href="#bestseller" onclick="closeNav()">Best Seller</a></li>
+    <li><a href="#katalog" onclick="closeNav()">Katalog</a></li>
+    <li><a href="#order" onclick="closeNav()">Cara Order</a></li>
+    <li><a href="#pembayaran" onclick="closeNav()">Pembayaran</a></li>
+    <li><a href="#ketentuan" onclick="closeNav()">Ketentuan</a></li>
+    <li><a href="#testimoni" onclick="closeNav()">Testimoni</a></li>
     <li><a href="https://wa.me/6281515695526" class="nav-wa" target="_blank">💬 Order WA</a></li>
   </ul>
+  <button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
+<div class="nav-overlay" id="navOverlay" onclick="closeNav()"></div>
 
 <!-- ─── HERO ─── -->
 <section id="home">
@@ -62,7 +70,7 @@
     <div class="why-card">
       <div class="why-icon">🌺</div>
       <h4>Fresh & Berkualitas</h4>
-      <p>Bunga segar pilihan yang tahan lama, dipilih langsung dengan teliti setiap harinya.</p>
+      <p>Bunga segar & artificial pilihan, dipilih langsung dengan teliti. Tahan lama dan berkualitas.</p>
     </div>
     <div class="why-card">
       <div class="why-icon">✨</div>
@@ -71,8 +79,8 @@
     </div>
     <div class="why-card">
       <div class="why-icon">🚀</div>
-      <h4>Pickup Fleksibel</h4>
-      <p>Pickup di area Bogor, waktu menyesuaikan kesepakatan dengan pembeli.</p>
+      <h4>Pickup & Gosend</h4>
+      <p>Ambil langsung di Seracoliving 36, atau kirim via gosend/lalamove ke seluruh area.</p>
     </div>
     <div class="why-card">
       <div class="why-icon">💬</div>
@@ -151,24 +159,23 @@
   <div class="cat-tabs">
     <button class="cat-tab active" onclick="filterKat('semua',this)">Semua</button>
     <button class="cat-tab" onclick="filterKat('pipe',this)">🌸 Pipe Flower</button>
-    <button class="cat-tab" onclick="filterKat('fresh',this)">🌼 Fresh Bouquet</button>
     <button class="cat-tab" onclick="filterKat('money',this)">💸 Money Bouquet</button>
     <button class="cat-tab" onclick="filterKat('artificial',this)">🪷 Artificial</button>
     <button class="cat-tab" onclick="filterKat('custom',this)">✨ Custom</button>
     <button class="cat-tab" onclick="filterKat('gift',this)">🎁 Gift & Souvenir</button>
   </div>
-  <div class="katalog-grid" id="katGrid">
+  <div class="katalog-grid" id="katGrid" data-collapsed="true">
 
     <!-- ── PIPE FLOWER ── -->
     <div class="prod-card" data-cat="pipe" onclick="openModal(
       'Pipe Flower',
       'Pipe Flower',
       'Hubungi kami',
-      './foto/PIPE FLOWER.jpg',
+      './foto/Pipe/PIPE FLOWER.jpg',
       'Rangkaian buket pipe flower cantik dengan berbagai pilihan warna. Bisa disesuaikan dengan tema momen kamu.'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img src="./foto/PIPE FLOWER.jpg" alt="Pipe Flower">
+        <img src="./foto/Pipe/PIPE FLOWER.jpg" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -178,24 +185,12 @@
       </div>
     </div>
 
-    <!-- ── FRESH BOUQUET ── -->
-    <div class="prod-card" data-cat="fresh" onclick="openModal('Fresh Bouquet','Fresh Bouquet','Hubungi kami','🌹','Buket bunga segar pilihan yang harum dan tahan lama. Cocok untuk kado ulang tahun, anniversary, maupun wisuda.')">
-      <div class="prod-img" style="background:linear-gradient(135deg,#FFD6D6,#FFB3B3)">
-        <!-- <img src="fresh.jpg" alt="Fresh Bouquet"> -->
-        <div class="prod-img-placeholder">🌹<small>Gk nemu</small></div>
-      </div>
-      <div class="prod-info">
-        <div class="prod-cat">Fresh Bouquet</div>
-        <div class="prod-name">Fresh Bouquet</div>
-        <div class="prod-footer"><div class="prod-price">Rp 0</div><div class="prod-cta">Detail →</div></div>
-      </div>
-    </div>
 
     <!-- ── MONEY BOUQUET ── -->
     <!-- ── Money Bouquet 1 ── -->
-    <div class="prod-card" data-cat="money" onclick="openModal('Money Bouquet','Money Bouquet','Hubungi kami','./foto/money bouquet.jpg','Buket uang yang disusun cantik dan rapi. Isi uang bisa disesuaikan. Hadiah yang praktis sekaligus estetik!')">
+    <div class="prod-card" data-cat="money" onclick="openModal('Money Bouquet','Money Bouquet','Hubungi kami','./foto/Money/money bouquet.jpg','Buket uang yang disusun cantik dan rapi. Isi uang bisa disesuaikan. Hadiah yang praktis sekaligus estetik!')">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFF3CC,#FFE580)">
-        <img src="./foto/money bouquet.jpg" alt="Money Bouquet">
+        <img src="./foto/Money/money bouquet.jpg" alt="Money Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -206,9 +201,9 @@
     </div>
 
     <!-- ── Money Bouquet 2 ── -->
-    <div class="prod-card" data-cat="money" onclick="openModal('Money Bouquet','Money Bouquet','Hubungi kami','./foto/money bouquet 2.jpg','Buket uang yang disusun cantik dan rapi. Isi uang bisa disesuaikan. Hadiah yang praktis sekaligus estetik!')">
+    <div class="prod-card" data-cat="money" onclick="openModal('Money Bouquet','Money Bouquet','Hubungi kami','./foto/Money/money bouquet 2.jpg','Buket uang yang disusun cantik dan rapi. Isi uang bisa disesuaikan. Hadiah yang praktis sekaligus estetik!')">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFF3CC,#FFE580)">
-        <img src="./foto/money bouquet 2.jpg" alt="Money Bouquet">
+        <img src="./foto/Money/money bouquet 2.jpg" alt="Money Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -219,9 +214,9 @@
     </div>
 
     <!-- ── Money Bouquet 3 ── -->
-    <div class="prod-card" data-cat="money" onclick="openModal('Money Bouquet','Money Bouquet','Hubungi kami','./foto/money bouquet 3.jpg','Buket uang yang disusun cantik dan rapi. Isi uang bisa disesuaikan. Hadiah yang praktis sekaligus estetik!')">
+    <div class="prod-card" data-cat="money" onclick="openModal('Money Bouquet','Money Bouquet','Hubungi kami','./foto/Money/money bouquet 3.jpg','Buket uang yang disusun cantik dan rapi. Isi uang bisa disesuaikan. Hadiah yang praktis sekaligus estetik!')">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFF3CC,#FFE580)">
-        <img src="./foto/money bouquet 3.jpg" alt="Money Bouquet">
+        <img src="./foto/Money/money bouquet 3.jpg" alt="Money Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -233,9 +228,9 @@
 
     <!-- ── ARTIFICIAL BOUQUET ── -->
     <!-- ── Artificial Bouquet 1 ── -->
-    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/artificial bouquet.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
+    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/Artificial/artificial bouquet.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img src="./foto/artificial bouquet.jpg" alt="Artificial Bouquet">
+        <img src="./foto/Artificial/artificial bouquet.jpg" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -246,9 +241,9 @@
     </div>
 
     <!-- ── Artificial Bouquet 2 ── -->
-    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/artificial bouquet 2.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
+    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/Artificial/artificial bouquet 2.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img src="./foto/artificial bouquet 2.jpg" alt="Artificial Bouquet">
+        <img src="./foto/Artificial/artificial bouquet 2.jpg" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -259,9 +254,9 @@
     </div>
 
     <!-- ── Artificial Bouquet 3 ── -->
-    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/artificial bouquet 3.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
+    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/Artificial/artificial bouquet 3.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img src="./foto/artificial bouquet 3.jpg" alt="Artificial Bouquet">
+        <img src="./foto/Artificial/artificial bouquet 3.jpg" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -272,9 +267,9 @@
     </div>
 
     <!-- ── Artificial Bouquet 4 ── -->
-    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/artificial bouquet 4.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
+    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/Artificial/artificial bouquet 4.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img src="./foto/artificial bouquet 4.jpg" alt="Artificial Bouquet">
+        <img src="./foto/Artificial/artificial bouquet 4.jpg" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -285,9 +280,9 @@
     </div>
 
     <!-- ── Artificial Bouquet 5 ── -->
-    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/artificial bouquet 5.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
+    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/Artificial/artificial bouquet 5.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img src="./foto/artificial bouquet 5.jpg" alt="Artificial Bouquet">
+        <img src="./foto/Artificial/artificial bouquet 5.jpg" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -298,9 +293,9 @@
     </div>
 
     <!-- ── Artificial Bouquet 6 ── -->
-    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/artificial bouquet 6.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
+    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/Artificial/artificial bouquet 6.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img src="./foto/artificial bouquet 6.jpg" alt="Artificial Bouquet">
+        <img src="./foto/Artificial/artificial bouquet 6.jpg" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -311,9 +306,9 @@
     </div>
 
     <!-- ── Artificial Bouquet 7 ── -->
-    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/artificial bouquet 7.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
+    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/Artificial/artificial bouquet 7.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img src="./foto/artificial bouquet 7.jpg" alt="Artificial Bouquet">
+        <img src="./foto/Artificial/artificial bouquet 7.jpg" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -324,9 +319,9 @@
     </div>
 
     <!-- ── Artificial Bouquet 8 ── -->
-    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/artificial bouquet 8.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
+    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/Artificial/artificial bouquet 8.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img src="./foto/artificial bouquet 8.jpg" alt="Artificial Bouquet">
+        <img src="./foto/Artificial/artificial bouquet 8.jpg" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -337,9 +332,9 @@
     </div>
 
     <!-- ── Artificial Bouquet 9 ── -->
-    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/artificial bouquet 9.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
+    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/Artificial/artificial bouquet 9.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img src="./foto/artificial bouquet 9.jpg" alt="Artificial Bouquet">
+        <img src="./foto/Artificial/artificial bouquet 9.jpg" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -350,9 +345,9 @@
     </div>
 
     <!-- ── Artificial Bouquet 10 ── -->
-    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/artificial bouquet 10.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
+    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/Artificial/artificial bouquet 10.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img src="./foto/artificial bouquet 10.jpg" alt="Artificial Bouquet">
+        <img src="./foto/Artificial/artificial bouquet 10.jpg" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -363,9 +358,9 @@
     </div>
 
     <!-- ── Artificial Bouquet 11 ── -->
-    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/artificial bouquet 11.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
+    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/Artificial/artificial bouquet 11.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img src="./foto/artificial bouquet 11.jpg" alt="Artificial Bouquet">
+        <img src="./foto/Artificial/artificial bouquet 11.jpg" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -376,9 +371,9 @@
     </div>
 
     <!-- ── Artificial Bouquet 12 ── -->
-    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/artificial bouquet 12.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
+    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/Artificial/artificial bouquet 12.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img src="./foto/artificial bouquet 12.jpg" alt="Artificial Bouquet">
+        <img src="./foto/Artificial/artificial bouquet 12.jpg" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -389,9 +384,9 @@
     </div>
 
     <!-- ── Artificial Bouquet 13 ── -->
-    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/artificial bouquet 13.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
+    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/Artificial/artificial bouquet 13.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img src="./foto/artificial bouquet 13.jpg" alt="Artificial Bouquet">
+        <img src="./foto/Artificial/artificial bouquet 13.jpg" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -402,9 +397,9 @@
     </div>
 
     <!-- ── Artificial Bouquet 14 ── -->
-    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/artificial bouquet 14.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
+    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/Artificial/artificial bouquet 14.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img src="./foto/artificial bouquet 14.jpg" alt="Artificial Bouquet">
+        <img src="./foto/Artificial/artificial bouquet 14.jpg" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -415,9 +410,9 @@
     </div>
 
     <!-- ── Artificial Bouquet 15 ── -->
-    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/artificial bouquet 15.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
+    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/Artificial/artificial bouquet 15.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img src="./foto/artificial bouquet 15.jpg" alt="Artificial Bouquet">
+        <img src="./foto/Artificial/artificial bouquet 15.jpg" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -428,9 +423,9 @@
     </div>
 
     <!-- ── Artificial Bouquet 16 ── -->
-    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/artificial bouquet 16.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
+    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/Artificial/artificial bouquet 16.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img src="./foto/artificial bouquet 16.jpg" alt="Artificial Bouquet">
+        <img src="./foto/Artificial/artificial bouquet 16.jpg" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -441,9 +436,9 @@
     </div>
 
     <!-- ── Artificial Bouquet 17 ── -->
-    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/artificial bouquet 17.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
+    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/Artificial/artificial bouquet 17.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img src="./foto/artificial bouquet 17.jpg" alt="Artificial Bouquet">
+        <img src="./foto/Artificial/artificial bouquet 17.jpg" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -454,9 +449,9 @@
     </div>
 
     <!-- ── Artificial Bouquet 18 ── -->
-    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/artificial bouquet 18.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
+    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/Artificial/artificial bouquet 18.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img src="./foto/artificial bouquet 18.jpg" alt="Artificial Bouquet">
+        <img src="./foto/Artificial/artificial bouquet 18.jpg" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -467,9 +462,9 @@
     </div>
 
     <!-- ── Artificial Bouquet 19 ── -->
-    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/artificial bouquet 19.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
+    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/Artificial/artificial bouquet 19.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img src="./foto/artificial bouquet 19.jpg" alt="Artificial Bouquet">
+        <img src="./foto/Artificial/artificial bouquet 19.jpg" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -480,9 +475,9 @@
     </div>
 
     <!-- ── Artificial Bouquet 20 ── -->
-    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/artificial bouquet 20.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
+    <div class="prod-card" data-cat="artificial" onclick="openModal('Artificial Bouquet','Artificial Bouquet','Hubungi kami','./foto/Artificial/artificial bouquet 20.jpg','Buket bunga artificial berkualitas tinggi. Tahan lama, tidak layu, dan tetap cantik sebagai kenangan permanen.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img src="./foto/artificial bouquet 20.jpg" alt="Artificial Bouquet">
+        <img src="./foto/Artificial/artificial bouquet 20.jpg" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -494,9 +489,9 @@
 
     <!-- ── CUSTOM BOUQUET ── -->
     <!-- ── Custom Bouquet 1 ── -->
-    <div class="prod-card" data-cat="custom" onclick="openModal('Custom Bouquet','Custom Bouquet','Hubungi kami','./foto/custom bouquet 1.jpg','Mau konsep unik? Kita bisa buat sesuai keinginan kamu! Ceritakan tema, warna favorit, dan budget-mu.')">
+    <div class="prod-card" data-cat="custom" onclick="openModal('Custom Bouquet','Custom Bouquet','Hubungi kami','./foto/Custom/custom bouquet 1.jpg','Mau konsep unik? Kita bisa buat sesuai keinginan kamu! Ceritakan tema, warna favorit, dan budget-mu.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FF99CC)">
-        <img src="./foto/custom bouquet 1.jpg" alt="Custom Bouquet">
+        <img src="./foto/Custom/custom bouquet 1.jpg" alt="Custom Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -507,9 +502,9 @@
     </div>
 
     <!-- ── Custom Bouquet 2 ── -->
-    <div class="prod-card" data-cat="custom" onclick="openModal('Custom Bouquet','Custom Bouquet','Hubungi kami','./foto/custom bouquet 2.jpg','Mau konsep unik? Kita bisa buat sesuai keinginan kamu! Ceritakan tema, warna favorit, dan budget-mu.')">
+    <div class="prod-card" data-cat="custom" onclick="openModal('Custom Bouquet','Custom Bouquet','Hubungi kami','./foto/Custom/custom bouquet 2.jpg','Mau konsep unik? Kita bisa buat sesuai keinginan kamu! Ceritakan tema, warna favorit, dan budget-mu.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FF99CC)">
-        <img src="./foto/custom bouquet 2.jpg" alt="Custom Bouquet">
+        <img src="./foto/Custom/custom bouquet 2.jpg" alt="Custom Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -520,9 +515,9 @@
     </div>
 
     <!-- ── Custom Bouquet 3 ── -->
-    <div class="prod-card" data-cat="custom" onclick="openModal('Custom Bouquet','Custom Bouquet','Hubungi kami','./foto/custom bouquet 3.jpg','Mau konsep unik? Kita bisa buat sesuai keinginan kamu! Ceritakan tema, warna favorit, dan budget-mu.')">
+    <div class="prod-card" data-cat="custom" onclick="openModal('Custom Bouquet','Custom Bouquet','Hubungi kami','./foto/Custom/custom bouquet 3.jpg','Mau konsep unik? Kita bisa buat sesuai keinginan kamu! Ceritakan tema, warna favorit, dan budget-mu.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FF99CC)">
-        <img src="./foto/custom bouquet 3.jpg" alt="Custom Bouquet">
+        <img src="./foto/Custom/custom bouquet 3.jpg" alt="Custom Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -536,7 +531,7 @@
     <!-- ── Gift & Souvenir 1 ── -->
     <div class="prod-card" data-cat="gift" onclick="openModal('Gift & Souvenir','Gift & Souvenir','Hubungi kami','🎁','Berbagai pilihan gift box dan souvenir cantik untuk melengkapi momen spesialmu. Bisa custom sesuai kebutuhan.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFE0B3,#FFD080)">
-        <img src="./foto/gift.jpg" alt="Gift & Souvenir">
+        <img src="./foto/Gift/gift.jpg" alt="Gift & Souvenir">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -549,7 +544,7 @@
     <!-- ── Gift & Souvenir 2 ── -->
     <div class="prod-card" data-cat="gift" onclick="openModal('Gift & Souvenir','Gift & Souvenir','Hubungi kami','🎁','Berbagai pilihan gift box dan souvenir cantik untuk melengkapi momen spesialmu. Bisa custom sesuai kebutuhan.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFE0B3,#FFD080)">
-        <img src="./foto/gift 2.jpg" alt="Gift & Souvenir">
+        <img src="./foto/Gift/gift 2.jpg" alt="Gift & Souvenir">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -562,7 +557,7 @@
     <!-- ── Gift & Souvenir 3 ── -->
     <div class="prod-card" data-cat="gift" onclick="openModal('Gift & Souvenir','Gift & Souvenir','Hubungi kami','🎁','Berbagai pilihan gift box dan souvenir cantik untuk melengkapi momen spesialmu. Bisa custom sesuai kebutuhan.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFE0B3,#FFD080)">
-        <img src="./foto/gift 3.jpg" alt="Gift & Souvenir">
+        <img src="./foto/Gift/gift 3.jpg" alt="Gift & Souvenir">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -575,7 +570,7 @@
     <!-- ── Gift & Souvenir 4 ── -->
     <div class="prod-card" data-cat="gift" onclick="openModal('Gift & Souvenir','Gift & Souvenir','Hubungi kami','🎁','Berbagai pilihan gift box dan souvenir cantik untuk melengkapi momen spesialmu. Bisa custom sesuai kebutuhan.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFE0B3,#FFD080)">
-        <img src="./foto/gift 4.jpg" alt="Gift & Souvenir">
+        <img src="./foto/Gift/gift 4.jpg" alt="Gift & Souvenir">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -588,7 +583,7 @@
     <!-- ── Gift & Souvenir 5 ── -->
     <div class="prod-card" data-cat="gift" onclick="openModal('Gift & Souvenir','Gift & Souvenir','Hubungi kami','🎁','Berbagai pilihan gift box dan souvenir cantik untuk melengkapi momen spesialmu. Bisa custom sesuai kebutuhan.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFE0B3,#FFD080)">
-        <img src="./foto/gift 5.jpg" alt="Gift & Souvenir">
+        <img src="./foto/Gift/gift 5.jpg" alt="Gift & Souvenir">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -601,7 +596,7 @@
     <!-- ── Gift & Souvenir 6 ── -->
     <div class="prod-card" data-cat="gift" onclick="openModal('Gift & Souvenir','Gift & Souvenir','Hubungi kami','🎁','Berbagai pilihan gift box dan souvenir cantik untuk melengkapi momen spesialmu. Bisa custom sesuai kebutuhan.')">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFE0B3,#FFD080)">
-        <img src="./foto/gift 6.jpg" alt="Gift & Souvenir">
+        <img src="./foto/Gift/gift 6.jpg" alt="Gift & Souvenir">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -612,9 +607,13 @@
     </div>
 
   </div>
+  <div class="kat-toggle-wrap">
+    <button class="kat-toggle-btn" id="katToggleBtn" onclick="toggleKatalog()">
+      <span id="katToggleText">Lihat Semua Produk</span>
+      <span class="kat-toggle-icon" id="katToggleIcon">↓</span>
+    </button>
+  </div>
 </section>
-
-<!-- ─── CARA ORDER ─── -->
 <section id="order">
   <div class="sec-label">Mudah Banget!</div>
   <h2 class="sec-title">Cara <span>Order</span> 💬</h2>
@@ -638,14 +637,14 @@
         <div class="step-num">3</div>
         <div>
           <h4>Konfirmasi & Bayar</h4>
-          <p>Kami kirim total harga + rekening. Pembayaran bisa transfer bank atau e-wallet.</p>
+          <p>Kami kirim total harga. Pembayaran via transfer bank, e-wallet, atau QRIS.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">4</div>
         <div>
-          <h4>Proses & Pick up</h4>
-          <p>Hirzi</p>
+          <h4>Proses & Pick Up</h4>
+          <p>Pengerjaan 2–3 hari. Ambil di Seracoliving 36 atau gosend/lalamove (biaya ditanggung pembeli).</p>
         </div>
       </div>
     </div>
@@ -658,6 +657,98 @@
       </a>
     </div>
   </div>
+
+  <!-- METODE PEMBAYARAN -->
+  <div class="payment-section" id="pembayaran">
+    <h3 class="payment-title">Metode Pembayaran 💳</h3>
+    <div class="payment-wrap">
+
+      <!-- BANK & E-WALLET -->
+      <div class="payment-col">
+        <div class="payment-col-label">Transfer Bank & E-Wallet</div>
+        <div class="payment-list">
+          <div class="payment-item">
+            <div class="pay-icon pay-bri">BRI</div>
+            <div class="pay-detail">
+              <div class="pay-name">Bank BRI</div>
+              <div class="pay-num">004501112192505</div>
+              <div class="pay-holder">a.n. Valencia Aletha</div>
+            </div>
+          </div>
+          <div class="payment-item">
+            <div class="pay-icon pay-bca">BCA</div>
+            <div class="pay-detail">
+              <div class="pay-name">Bank BCA</div>
+              <div class="pay-num">0955045586</div>
+              <div class="pay-holder">a.n. Valencia Aletha K.</div>
+            </div>
+          </div>
+          <div class="payment-item">
+            <div class="pay-icon pay-spay">SPay</div>
+            <div class="pay-detail">
+              <div class="pay-name">SPayLater / ShopeePay</div>
+              <div class="pay-num">082210044590</div>
+              <div class="pay-holder">a.n. valenciaaaletha</div>
+            </div>
+          </div>
+          <div class="payment-item">
+            <div class="pay-icon pay-gopay">GP</div>
+            <div class="pay-detail">
+              <div class="pay-name">GoPay</div>
+              <div class="pay-num">082210044590</div>
+              <div class="pay-holder">a.n. cia</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QRIS -->
+      <div class="payment-col">
+        <div class="payment-col-label">QRIS · Scan & Pay</div>
+        <div class="qris-accordion" id="qrisAccordion">
+          <button class="qris-toggle" onclick="toggleQris()" id="qrisToggle">
+            <div class="qris-toggle-left">
+              <span class="qris-badge-sm">QRIS</span>
+              <span class="qris-toggle-name">BLOOMERRY.FLO</span>
+              <span class="qris-toggle-sub">Tap untuk lihat kode</span>
+            </div>
+            <span class="qris-toggle-arrow" id="qrisArrow">▼</span>
+          </button>
+          <div class="qris-body" id="qrisBody">
+            <div class="qris-card">
+              
+              <div class="qris-img-wrap">
+                  <img src="./foto/Others/qris.png" alt="QRIS Bloomerry">
+              </div>
+              <div style="text-align: center; margin-top: 8px; margin-bottom: 4px;">
+                  <button onclick="downloadQRIS(event)" style="background: var(--pink); color: white; padding: 6px 16px; border: none; border-radius: 2rem; font-family: 'Nunito', sans-serif; font-size: 0.85rem; font-weight: 700; cursor: pointer; transition: background 0.2s;">
+                    📥 Download QRIS
+                  </button>
+              </div>
+              <div class="qris-name">BLOOMERRY.FLO</div>
+              <div class="qris-note">Berlaku untuk semua aplikasi dompet digital</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- KETENTUAN -->
+  <div class="ketentuan-section" id="ketentuan">
+    <h3 class="ketentuan-title">📋 Ketentuan Order</h3>
+    <div class="ketentuan-grid">
+      <div class="ket-item"><span class="ket-icon">⏱️</span><div><b>Waktu Pengerjaan</b><p>2–3 hari kerja. Artificial PO 5–7 hari, atau 2 hari (stok menyesuaikan gudang).</p></div></div>
+      <div class="ket-item"><span class="ket-icon">🌸</span><div><b>Hasil Buket</b><p>Pembuatan buket tidak bisa 100% mirip referensi. Stok tidak tersedia akan dikonsultasikan terlebih dahulu.</p></div></div>
+      <div class="ket-item"><span class="ket-icon">💸</span><div><b>Buket Uang</b><p>Menggunakan uang bekas yang telah dicuci & disetrika bersih. Tidak bisa menggunakan uang baru.</p></div></div>
+    </div>
+    <div class="ketentuan-row2">
+      <div class="ket-item"><span class="ket-icon">🎁</span><div><b>Bonus & Promo</b><p>Free greeting card (maks 10 kata). Beli 10+ item model sama diskon 10% dari total.</p></div></div>
+      <div class="ket-item"><span class="ket-icon">📍</span><div><b>Pengambilan</b><p>Pick up di Seracoliving 36. Pengiriman via gosend/lalamove, biaya ditanggung pembeli.</p></div></div>
+    </div>
+  </div>
+
 </section>
 
 <!-- ─── TESTIMONI ─── -->
@@ -665,44 +756,81 @@
   <div style="text-align:center">
     <div class="sec-label">Kata Mereka</div>
     <h2 class="sec-title">Testimoni <span>Pelanggan</span> 💬</h2>
+    <p class="sec-sub">Langsung dari chat WhatsApp pelanggan setia kami 🌸</p>
   </div>
-  <div class="testi-grid">
+  <div class="testi-wa-grid">
 
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">"🔥🔥"</p>
-      <div class="testi-author">
-        <div class="testi-avatar">👩</div>
-        <div>
-          <div class="testi-name">Hirzi</div>
-          <div class="testi-occasion">Produk • Bulan Tahun</div>
+    <div class="testi-wa-card">
+      <div class="testi-wa-header">
+        <div class="testi-wa-dot"></div>
+        <span class="testi-wa-label">WhatsApp Chat</span>
+      </div>
+      <div class="testi-wa-img-wrap">
+        <img src="./foto/Testimoni/Testimoni 1.jpg" alt="Testimoni 1">
+        <div class="testi-wa-img-placeholder">
         </div>
       </div>
     </div>
 
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">"Wow"</p>
-      <div class="testi-author">
-        <div class="testi-avatar">👩</div>
-        <div>
-          <div class="testi-name">Hirzi</div>
-          <div class="testi-occasion">Produk • Bulan Tahun</div>
+    <div class="testi-wa-card">
+      <div class="testi-wa-header">
+        <div class="testi-wa-dot"></div>
+        <span class="testi-wa-label">WhatsApp Chat</span>
+      </div>
+      <div class="testi-wa-img-wrap">
+        <img src="./foto/Testimoni/Testimoni 2.jpg" alt="Testimoni 2">
+        <div class="testi-wa-img-placeholder">
         </div>
       </div>
     </div>
 
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">"Rekomen"</p>
-      <div class="testi-author">
-        <div class="testi-avatar">👨</div>
-        <div>
-          <div class="testi-name">Hirzi</div>
-          <div class="testi-occasion">Produk • Bulan Tahun</div>
+    <div class="testi-wa-card">
+      <div class="testi-wa-header">
+        <div class="testi-wa-dot"></div>
+        <span class="testi-wa-label">WhatsApp Chat</span>
+      </div>
+      <div class="testi-wa-img-wrap">
+        <img src="./foto/Testimoni/Testimoni 3.jpg" alt="Testimoni 3">
+        <div class="testi-wa-img-placeholder">
         </div>
       </div>
     </div>
+    
+    <div class="testi-wa-card">
+      <div class="testi-wa-header">
+        <div class="testi-wa-dot"></div>
+        <span class="testi-wa-label">WhatsApp Chat</span>
+      </div>
+      <div class="testi-wa-img-wrap">
+        <img src="./foto/Testimoni/Testimoni 4.jpg" alt="Testimoni 4">
+        <div class="testi-wa-img-placeholder">
+        </div>
+      </div>
+    </div>
+    
+    <div class="testi-wa-card">
+      <div class="testi-wa-header">
+        <div class="testi-wa-dot"></div>
+        <span class="testi-wa-label">WhatsApp Chat</span>
+      </div>
+      <div class="testi-wa-img-wrap">
+        <img src="./foto/Testimoni/Testimoni 5.jpg" alt="Testimoni 5">
+        <div class="testi-wa-img-placeholder">
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-wa-card">
+      <div class="testi-wa-header">
+        <div class="testi-wa-dot"></div>
+        <span class="testi-wa-label">WhatsApp Chat</span>
+      </div>
+      <div class="testi-wa-img-wrap">
+        <img src="./foto/Testimoni/Testimoni 6.jpg" alt="Testimoni 6">
+        <div class="testi-wa-img-placeholder">
+        </div>
+      </div>
+    </div>      
 
   </div>
 </section>
@@ -713,7 +841,7 @@
   <h2 class="sec-title">Lokasi & <span>Sosmed</span> 📍</h2>
   <div class="lokasi-wrap">
     <div class="map-box">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d986.3634623240869!2d106.8068843688561!3d-6.591808227644979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c50039de2da9%3A0xaf178da69997d371!2sseracoliving%2036!5e0!3m2!1sen!2sid!4v1778488622416!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d986.3634623240869!2d106.8068843688561!3d-6.591808227644979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c50039de2da9%3A0xaf178da69997d371!2sseracoliving%2036!5e0!3m2!1sen!2sid!4v1778488622416!5m2!1sen!2sid" style="border:0;width:100%;height:100%;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="lokasi-info">
       <div class="loc-card">

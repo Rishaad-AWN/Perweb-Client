@@ -35,9 +35,69 @@ function closeModalDirect() {
 function filterKat(cat, btn) {
   document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
   btn.classList.add('active');
+  const grid = document.getElementById('katGrid');
+  if (grid.classList.contains('collapsed')) {
+    grid.classList.remove('collapsed');
+    document.getElementById('katToggleText').textContent = 'Sembunyikan Produk';
+    document.getElementById('katToggleIcon').classList.add('rotated');
+  }
   document.querySelectorAll('#katGrid .prod-card').forEach(c => {
     c.style.display = (cat === 'semua' || c.dataset.cat === cat) ? 'block' : 'none';
   });
 }
 
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
+
+/* ─── KATALOG TOGGLE ─── */
+document.addEventListener('DOMContentLoaded', () => {
+  const grid = document.getElementById('katGrid');
+  if (grid) grid.classList.add('collapsed');
+});
+
+function toggleKatalog() {
+  const grid = document.getElementById('katGrid');
+  const btn  = document.getElementById('katToggleBtn');
+  const text = document.getElementById('katToggleText');
+  const icon = document.getElementById('katToggleIcon');
+  const isCollapsed = grid.classList.toggle('collapsed');
+  text.textContent = isCollapsed ? 'Lihat Semua Produk' : 'Sembunyikan Produk';
+  icon.classList.toggle('rotated', !isCollapsed);
+  if (!isCollapsed) {
+    setTimeout(() => grid.scrollIntoView({ behavior:'smooth', block:'nearest' }), 50);
+  }
+}
+
+/* ─── HAMBURGER MENU ─── */
+function toggleNav() {
+  const nav    = document.getElementById('navLinks');
+  const btn    = document.getElementById('hamburger');
+  const overlay= document.getElementById('navOverlay');
+  const isOpen = nav.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+  overlay.classList.toggle('show', isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+}
+function closeNav() {
+  document.getElementById('navLinks').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+  document.getElementById('navOverlay').classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+function toggleQris() {
+  var acc = document.getElementById("qrisAccordion");
+  acc.classList.toggle("open");
+}
+
+function downloadQRIS(event) {
+  event.preventDefault();
+  const imgElement = document.querySelector('.qris-img-wrap img');
+  if (imgElement && imgElement.src) {
+    const link = document.createElement('a');
+    link.href = imgElement.src;
+    link.download = 'QRIS_Bloomerry.png';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+}

@@ -62,7 +62,7 @@ function toggleKatalog() {
   const isCollapsed = grid.classList.toggle('collapsed');
   text.textContent = isCollapsed ? 'Lihat Semua Produk' : 'Sembunyikan Produk';
   icon.classList.toggle('rotated', !isCollapsed);
-  // When collapsing, remove inline display styles so CSS nth-child rule takes effect
+
   if (isCollapsed) {
     grid.querySelectorAll('.prod-card').forEach((c, i) => {
       if (i >= 6) c.style.display = '';

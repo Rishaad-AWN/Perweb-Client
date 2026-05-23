@@ -2547,14 +2547,20 @@
 <!-- ─── MODAL DETAIL PRODUK ─── -->
 <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
   <div class="modal">
-    <button class="modal-close" onclick="closeModalDirect()">✕</button>
-    <div class="modal-img" id="mImg"></div>
-    <div class="modal-cat" id="mCat"></div>
-    <div class="modal-title" id="mTitle"></div>
-    <div class="modal-price" id="mPrice"></div>
-    <div class="modal-desc" id="mDesc"></div>
-    <div class="modal-specs" id="mSpecs" style="display:none"></div>
-    <a href="#" class="modal-wa" id="mWa" target="_blank">💬 Order via WhatsApp</a>
+    <!-- Sticky header — X button never scrolls away -->
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModalDirect()">✕</button>
+    </div>
+    <!-- Scrollable content -->
+    <div class="modal-body">
+      <div class="modal-img" id="mImg"></div>
+      <div class="modal-cat" id="mCat"></div>
+      <div class="modal-title" id="mTitle"></div>
+      <div class="modal-price" id="mPrice"></div>
+      <div class="modal-desc" id="mDesc"></div>
+      <div class="modal-specs" id="mSpecs" style="display:none"></div>
+      <a href="#" class="modal-wa" id="mWa" target="_blank">💬 Order via WhatsApp</a>
+    </div>
   </div>
 </div>
 

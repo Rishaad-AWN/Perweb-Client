@@ -13,10 +13,10 @@ function openModal(name, cat, price, emoji, desc, size, isi, wrap, berat) {
   if (size || isi || wrap || berat) {
     specs.style.display = 'block';
     specs.innerHTML = `<h4>📐 Spesifikasi</h4>
-      ${size  ? `<div class="spec-row"><span class="spec-key">Ukuran</span><span>${size}</span></div>`  : ''}
+      ${size  ? `<div class="spec-row"><span class="spec-key">Tipe</span><span>${size}</span></div>`  : ''}
       ${isi   ? `<div class="spec-row"><span class="spec-key">Isi</span><span>${isi}</span></div>`      : ''}
       ${wrap  ? `<div class="spec-row"><span class="spec-key">Wrapping</span><span>${wrap}</span></div>`: ''}
-      ${berat ? `<div class="spec-row"><span class="spec-key">Berat</span><span>${berat}</span></div>`  : ''}`;
+      ${berat ? `<div class="spec-row"><span class="spec-key">Ukuran</span><span>${berat}</span></div>`  : ''}`;
   } else { specs.style.display = 'none'; }
 
   const msg = `Halo Bloomerry! Saya tertarik dengan *${name}* (${price}). Boleh info lebih lanjut?`;

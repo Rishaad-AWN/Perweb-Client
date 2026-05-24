@@ -52,33 +52,27 @@ function applyKatalogState() {
   const toggleText = document.getElementById('katToggleText');
   const toggleIcon = document.getElementById('katToggleIcon');
 
-
   const allCards = Array.from(document.querySelectorAll('#katGrid .prod-card'));
   const matchingCards = allCards.filter(c => currentCat === 'semua' || c.dataset.cat === currentCat);
 
-
-  allCards.forEach(c => {
+  // DOM
+  const displayValues = allCards.map(c => {
     const matchesCat = currentCat === 'semua' || c.dataset.cat === currentCat;
-    if (!matchesCat) {
-      c.style.display = 'none';
-    } else {
-
-      if (katIsHidden) {
-        const idx = matchingCards.indexOf(c);
-        c.style.display = idx < 6 ? 'block' : 'none';
-      } else {
-        c.style.display = 'block';
-      }
+    if (!matchesCat) return 'none';
+    if (katIsHidden) {
+      const idx = matchingCards.indexOf(c);
+      return idx < 6 ? 'block' : 'none';
     }
+    return 'block';
   });
 
+  allCards.forEach((c, i) => { c.style.display = displayValues[i]; });
 
   if (toggleText) toggleText.textContent = katIsHidden ? 'Lihat Semua Produk' : 'Sembunyikan Produk';
   if (toggleIcon) toggleIcon.classList.toggle('rotated', !katIsHidden);
 
   const toggleWrap = document.getElementById('katToggleWrap');
   if (toggleWrap) toggleWrap.style.display = matchingCards.length > 6 ? 'flex' : 'none';
-
 
   const floatBtn = document.getElementById('katFloatBtn');
   if (floatBtn) {

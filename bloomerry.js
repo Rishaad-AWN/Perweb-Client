@@ -36,9 +36,9 @@ function openModal(name, cat, price, emoji, desc, size, isi, wrap, berat) {
 function closeModal(e) { if (e.target.id === 'modalOverlay') closeModalDirect(); }
 function closeModalDirect() { document.getElementById('modalOverlay').classList.remove('open'); document.body.style.overflow = ''; }
 
-// Track current active category and hidden state globally
+
 let currentCat = 'semua';
-let katIsHidden = true; // start hidden (collapsed by default)
+let katIsHidden = true; 
 
 function filterKat(cat, btn) {
   document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
@@ -52,17 +52,17 @@ function applyKatalogState() {
   const toggleText = document.getElementById('katToggleText');
   const toggleIcon = document.getElementById('katToggleIcon');
 
-  // First, determine which cards match the current category filter
+
   const allCards = Array.from(document.querySelectorAll('#katGrid .prod-card'));
   const matchingCards = allCards.filter(c => currentCat === 'semua' || c.dataset.cat === currentCat);
 
-  // Hide/show based on category filter
+
   allCards.forEach(c => {
     const matchesCat = currentCat === 'semua' || c.dataset.cat === currentCat;
     if (!matchesCat) {
       c.style.display = 'none';
     } else {
-      // Matching card - show or hide based on katIsHidden (only show first 6)
+
       if (katIsHidden) {
         const idx = matchingCards.indexOf(c);
         c.style.display = idx < 6 ? 'block' : 'none';
@@ -72,15 +72,14 @@ function applyKatalogState() {
     }
   });
 
-  // Update button text & icon
+
   if (toggleText) toggleText.textContent = katIsHidden ? 'Lihat Semua Produk' : 'Sembunyikan Produk';
   if (toggleIcon) toggleIcon.classList.toggle('rotated', !katIsHidden);
 
-  // Update toggle button visibility: only show if there are more than 6 matching cards
   const toggleWrap = document.getElementById('katToggleWrap');
   if (toggleWrap) toggleWrap.style.display = matchingCards.length > 6 ? 'flex' : 'none';
 
-  // Update floating toggle button too — only show when there's something to toggle (>6 cards)
+
   const floatBtn = document.getElementById('katFloatBtn');
   if (floatBtn) {
     const shouldShow = matchingCards.length > 6;
@@ -97,7 +96,6 @@ function applyKatalogState() {
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize katalog with hidden state
   katIsHidden = true;
   currentCat = 'semua';
   applyKatalogState();

@@ -1,20 +1,38 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bloomerry — Let's Bloom Every Day</title>
+<meta property="og:title" content="Bloomerry — Florist &amp; Gift Specialist Bogor">
+<meta property="og:description" content="Pipe flower, money bouquet, artificial bouquet, custom hamper &amp; gift souvenir. Tersedia gosend/lalamove. Order via WhatsApp!">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<meta name="robots" content="index, follow">
+<meta name="description" content="Bloomerry — Florist & Gift Specialist di Bogor. Pipe flower, money bouquet, artificial bouquet, custom hamper, dan gift & souvenir. Order via WhatsApp, siap gosend/lalamove.">
+<meta name="theme-color" content="#FF4FA3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Paytone+One&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="bloomerry.css">
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- ─── NAVBAR ─── -->
 <nav>
   <div class="nav-logo">
-    <img src="./foto/Logo/logo bloom cirlce.png" alt="Bloomerry"></span>
+    <img width="80" height="80" src="./foto/Logo/logo bloom cirlce.png" alt="Bloomerry" fetchpriority="high"></span>
   </div>
   <ul class="nav-links" id="navLinks">
+    <li class="nav-close-item">
+      <button class="nav-close-btn" onclick="closeNav()" aria-label="Tutup menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+        Tutup
+      </button>
+    </li>
     <li><a href="#home" onclick="closeNav()">Home</a></li>
     <li><a href="#bestseller" onclick="closeNav()">Best Seller</a></li>
     <li><a href="#katalog" onclick="closeNav()">Katalog</a></li>
@@ -30,6 +48,7 @@
     <span></span>
   </button>
 </nav>
+<main id="main-content">
 <div class="nav-overlay" id="navOverlay" onclick="closeNav()"></div>
 
 <!-- ─── HERO ─── -->
@@ -45,7 +64,7 @@
   </div>
   <div class="hero-visual">
     <div class="hero-img-wrap">
-      <img src="./foto/Logo/logo bloom cirlce.png" alt="Bloomerry" style="width:80%;height:80%;object-fit:contain;">
+      <img width="80" height="80" src="./foto/Logo/logo bloom cirlce.png" alt="Bloomerry" style="width:80%;height:80%;object-fit:contain;">
     </div>
     <div class="hero-badge hero-badge-1">🌸 Fresh & Custom!</div>
     <div class="hero-badge hero-badge-2">⚡ Fast & Reliable</div>
@@ -69,22 +88,22 @@
   <div class="why-grid" style="margin-top:3rem">
     <div class="why-card">
       <div class="why-icon">🌺</div>
-      <h4>Fresh & Berkualitas</h4>
+      <h3>Fresh & Berkualitas</h3>
       <p>Bunga segar & artificial pilihan, dipilih langsung dengan teliti. Tahan lama dan berkualitas.</p>
     </div>
     <div class="why-card">
       <div class="why-icon">✨</div>
-      <h4>Bisa Custom</h4>
+      <h3>Bisa Custom</h3>
       <p>Warna, ukuran, dan konsep bisa disesuaikan dengan kebutuhan dan budget kamu.</p>
     </div>
     <div class="why-card">
       <div class="why-icon">🚀</div>
-      <h4>Pickup & Gosend</h4>
+      <h3>Pickup & Gosend</h3>
       <p>Ambil langsung di Seracoliving 36, atau kirim via gosend/lalamove ke seluruh area.</p>
     </div>
     <div class="why-card">
       <div class="why-icon">💬</div>
-      <h4>Respon Cepat & Ramah</h4>
+      <h3>Respon Cepat & Ramah</h3>
       <p>Tim kami siap membantu dari konsultasi sampai produk sampai di tanganmu.</p>
     </div>
   </div>
@@ -111,7 +130,7 @@
       'Medium', 'Lily, Daisy Love Flower, Love, Spiral', 'Cellophane', '40x35'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/90k/PIPE FLOWER 30.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/90k/PIPE FLOWER 30.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
         <div class="prod-badge">🔥 Best</div>
       </div>
@@ -135,7 +154,7 @@
       'Large', 'Rose, Mini Krisan, Baby Breath, Green Foliage', 'Cellophane, Mesh', '65x50'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFF0B3,#FFE066)">
-        <img loading="lazy" src="./foto/Artificial/120-175k/artificial bouquet 17.webp" alt="Artificial Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Artificial/120-175k/artificial bouquet 17.webp" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small>Hirzi</small></div>
         <div class="prod-badge">⭐ Fav</div>
       </div>
@@ -183,7 +202,7 @@
       'Large', 'Tulip, Daisy', 'Mesh, Cellophane', '65x50'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/120-175k/PIPE FLOWER.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/120-175k/PIPE FLOWER.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -203,7 +222,7 @@
       'Small', 'Lily, mini flower', 'Cellophane', '30x25'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/45k/PIPE FLOWER 1 (45k).webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/45k/PIPE FLOWER 1 (45k).webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -223,7 +242,7 @@
       'Small', 'Lily, Daisy, Spiral ', 'Cellophane', '30x25'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/45k/PIPE FLOWER 2 (45K).webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/45k/PIPE FLOWER 2 (45K).webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -243,7 +262,7 @@
       'Small', 'Tulip, double flowers, tiny flowers, leaf ', 'Cellophane', '30x25'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/45k/PIPE FLOWER 3 (45K).webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/45k/PIPE FLOWER 3 (45K).webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -263,7 +282,7 @@
       'Small', 'Lily, Daisy, Spiral ', 'Cellophane', '30x25'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/45k/PIPE FLOWER 4 (45K).webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/45k/PIPE FLOWER 4 (45K).webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -283,7 +302,7 @@
       'Large', 'Kamboja, Tulip, Vibrant ', 'Cellophane', '65x50'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/120-175k/PIPE FLOWER 5.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/120-175k/PIPE FLOWER 5.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -303,7 +322,7 @@
       'Small', 'Tulip, Mini Daisy, Lily ', 'Cellophane', '30x25'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/45k/PIPE FLOWER 6.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/45k/PIPE FLOWER 6.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -322,7 +341,7 @@
       'Rangkaian buket pipe flower cantik dengan berbagai pilihan warna. Bisa disesuaikan dengan tema momen kamu.',
       'Large', 'Tulip, Daisy, Aster, Mini Flowers ', 'Cellophane', '65x50')">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/120-175k/PIPE FLOWER 7.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/120-175k/PIPE FLOWER 7.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -342,7 +361,7 @@
       'Medium', 'Lily, Rose, Daisy, Vibrant, Leaf ', 'Cellophane, Mesh', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/90k/PIPE FLOWER 8.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/90k/PIPE FLOWER 8.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -362,7 +381,7 @@
       'Medium', 'Tulip, Mini Flower ', 'Cellophane, Crinkle ', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/90k/PIPE FLOWER 9.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/90k/PIPE FLOWER 9.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -382,7 +401,7 @@
       'Medium', 'Tulip, Mini Flower ', 'Cellophane, Mesh', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/90k/PIPE FLOWER 10.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/90k/PIPE FLOWER 10.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -402,7 +421,7 @@
       'Medium', 'Daisy, Double flower, Double love, Spiral ', 'Cellophane', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/65k/PIPE FLOWER 11.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/65k/PIPE FLOWER 11.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -422,7 +441,7 @@
       'Medium', 'Lily, Kamboja, Daisy, Spiral, Love ', 'Mesh, Cellophane', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/90k/PIPE FLOWER 12.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/90k/PIPE FLOWER 12.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -442,7 +461,7 @@
       'Medium', 'Lily, Love flower, Kamboja, Double flower, Spiral, Love ', 'Cellophane', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/80k/PIPE FLOWER 13.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/80k/PIPE FLOWER 13.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -462,7 +481,7 @@
       'Medium', 'Tulip, Lily, Vibrant ', 'Cellophane', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/65k/PIPE FLOWER 14.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/65k/PIPE FLOWER 14.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -482,7 +501,7 @@
       'Large', 'Lily, Tulip, Mini flowers, Lavender', 'Cellophane', '65x50'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/120-175k/PIPE FLOWER 15.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/120-175k/PIPE FLOWER 15.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -502,7 +521,7 @@
       'Large', 'Lily, Tulip, Daisy, Mini flowers, Lavender', 'Cellophane, Mesh', '65x50'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/120-175k/PIPE FLOWER 16.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/120-175k/PIPE FLOWER 16.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -522,7 +541,7 @@
       'Large', 'Sunflower, Lily, Tulip, Mini flowers, Lavender', 'Cellophane', '65x50'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/120-175k/PIPE FLOWER 17.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/120-175k/PIPE FLOWER 17.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -542,7 +561,7 @@
       'Medium', 'Lily, Daisy, Spiral, Love flower', 'Cellophane', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/90k/PIPE FLOWER 18.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/90k/PIPE FLOWER 18.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -562,7 +581,7 @@
       'Medium', ' Daisy, Lily, Lavender', 'Cellophane', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/50k/PIPE FLOWER 19.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/50k/PIPE FLOWER 19.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -582,7 +601,7 @@
       'Medium', ' Tulip, Lily', 'Cellophane', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/65k/PIPE FLOWER 20.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/65k/PIPE FLOWER 20.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -602,7 +621,7 @@
       'Medium', ' Tulip, Lily, Leaf', 'Cellophane', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/65k/PIPE FLOWER 21.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/65k/PIPE FLOWER 21.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -622,7 +641,7 @@
       'Large', ' Kamboja, Tulip, Mini flower, Love leaf', 'Cellophane', '65x50'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/120-175k/PIPE FLOWER 22.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/120-175k/PIPE FLOWER 22.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -642,7 +661,7 @@
       'Small', 'Spider Lily, Double flower, Spiral', 'Cellophane', '30x25'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/35k/PIPE FLOWER 23.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/35k/PIPE FLOWER 23.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -662,7 +681,7 @@
       'Small', 'Spider Lily, Double flower, Love flower, Spiral', 'Cellophane', '30x25'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/35k/PIPE FLOWER 24.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/35k/PIPE FLOWER 24.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -682,7 +701,7 @@
       'Medium', 'Tulips, Leaf', 'Cellophane, Mesh', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/65k/PIPE FLOWER 25.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/65k/PIPE FLOWER 25.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -702,7 +721,7 @@
       'Small', 'Lily, Tulip, Love, Spiral', 'Cellophane', '30x25'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/35k/PIPE FLOWER 26.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/35k/PIPE FLOWER 26.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -722,7 +741,7 @@
       'Small', 'Spider Lily, Double flower, Love flower, Spiral', 'Cellophane', '30x25'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/35k/PIPE FLOWER 27.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/35k/PIPE FLOWER 27.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -742,7 +761,7 @@
       'Medium', 'Lily, Double Llower, Double Love, Spiral', 'Cellophane', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/65k/PIPE FLOWER 28.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/65k/PIPE FLOWER 28.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -762,7 +781,7 @@
       'Medium', 'Lily, Daisy, Love Flower', 'Cellophane', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/80k/PIPE FLOWER 29.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/80k/PIPE FLOWER 29.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -782,7 +801,7 @@
       'Medium', 'Lily,, Daisy Love Flower, Love, Spiral', 'Cellophane', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/90k/PIPE FLOWER 30.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/90k/PIPE FLOWER 30.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -802,7 +821,7 @@
       'Small', 'Daisy, Double Flower, Double Love, Love, Spiral', 'Cellophane', '30x25'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/35k/PIPE FLOWER 31.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/35k/PIPE FLOWER 31.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -822,7 +841,7 @@
       'Medium', 'Double Flower, Love, Spiral', 'Cellophane Transparent', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/50k/PIPE FLOWER 32.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/50k/PIPE FLOWER 32.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -842,7 +861,7 @@
       'Medium', 'Daisy, Lily, Lover Flower, Spiral', 'Cellophane', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/80k/PIPE FLOWER 33.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/80k/PIPE FLOWER 33.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -862,7 +881,7 @@
       'Medium', 'Double Flower, Love, Spiral', 'Cellophane Transparent', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/50k/PIPE FLOWER 34.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/50k/PIPE FLOWER 34.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -882,7 +901,7 @@
       'Medium', 'Daisy, Lily, Lover Flower, Spiral', 'Cellophane', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/80k/PIPE FLOWER 36.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/80k/PIPE FLOWER 36.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -902,7 +921,7 @@
       'Small', 'Spider Lily, Love Flowers, Spiral', 'Cellophane', '30x25'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/35k/PIPE FLOWER 37.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/35k/PIPE FLOWER 37.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -922,7 +941,7 @@
       'Small', 'Double Flower, Double Love, Love, Spiral', 'Cellophane', '30x25'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/35k/PIPE FLOWER 38.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/35k/PIPE FLOWER 38.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -942,7 +961,7 @@
       'Mini', 'Lily, Daisy, Love, Spiral', 'Cellophane', '25x20'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/12-22k/PIPE FLOWER 39.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/12-22k/PIPE FLOWER 39.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -962,7 +981,7 @@
       'Small', 'Daisy, Lily, Love, Spiral', 'Cellophane', '30x25'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/35k/PIPE FLOWER 40.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/35k/PIPE FLOWER 40.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -982,7 +1001,7 @@
       'Small', 'Double Flower, Double Love, Love, Spiral', 'Cellophane', '30x25'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/35k/PIPE FLOWER 41.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/35k/PIPE FLOWER 41.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1002,7 +1021,7 @@
       'Small', 'Double Flower, Double Love, Love, Spiral', 'Cellophane', '30x25'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/35k/PIPE FLOWER 42.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/35k/PIPE FLOWER 42.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1022,7 +1041,7 @@
       'Small', 'Double Flower, Love, Spiral', 'Cellophane', '30x25'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/50k/PIPE FLOWER 43.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/50k/PIPE FLOWER 43.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1042,7 +1061,7 @@
       'Small', 'Spider Lily, Double Flower, Double Love, Spiral', 'Cellophane', '30x25'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/35k/PIPE FLOWER 44.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/35k/PIPE FLOWER 44.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1062,7 +1081,7 @@
       'Small', 'Double Flower, Double Love, Love, Spiral', 'Cellophane', '30x25'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/35k/PIPE FLOWER 45.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/35k/PIPE FLOWER 45.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1082,7 +1101,7 @@
       'Tiny', 'Daisy, Love, Spiral', 'Cellophane Glass', '25x20'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/12-22k/PIPE FLOWER 46.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/12-22k/PIPE FLOWER 46.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1102,7 +1121,7 @@
       'Tiny', 'Double Flower, Spiral', 'Cellophane Transparent', '25x20'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/12-22k/PIPE FLOWER 47.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/12-22k/PIPE FLOWER 47.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1122,7 +1141,7 @@
       'Tiny', 'Tulip', 'Cellophane Transparent', '25x20'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/12-22k/PIPE FLOWER 48.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/12-22k/PIPE FLOWER 48.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1142,7 +1161,7 @@
       'Tiny', 'Tulip, Spiral', 'Cellophane Transparent', '25x20'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/12-22k/PIPE FLOWER 49.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/12-22k/PIPE FLOWER 49.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1162,7 +1181,7 @@
       'Tiny', 'Sunflower, Spiral', 'Kraft Paper, Cellophane Glass', '25x20'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/12-22k/PIPE FLOWER 50.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/12-22k/PIPE FLOWER 50.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1182,7 +1201,7 @@
       'Tiny', 'Lily, mini flower', 'Cellophane Transparent', '25x20'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/12-22k/PIPE FLOWER 51.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/12-22k/PIPE FLOWER 51.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1202,7 +1221,7 @@
       'Tiny', 'Spider Lily', 'Cellophane Transparent', '25x20'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/12-22k/PIPE FLOWER 52.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/12-22k/PIPE FLOWER 52.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1222,7 +1241,7 @@
       'Tiny', 'Daisy, spiral', 'Cellophane Transparent', '25x20'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/12-22k/PIPE FLOWER 53.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/12-22k/PIPE FLOWER 53.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1242,7 +1261,7 @@
       'Tiny', 'Double Flower, Spiral', 'Cellophane Transparent', '25x20'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FFB3D9)">
-        <img loading="lazy" src="./foto/Pipe/12-22k/PIPE FLOWER 54.webp" alt="Pipe Flower">
+        <img width="400" height="500" loading="lazy" src="./foto/Pipe/12-22k/PIPE FLOWER 54.webp" alt="Pipe Flower">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1262,7 +1281,7 @@
       'Buket uang yang disusun cantik dan rapi. Isi uang bisa disesuaikan. Hadiah yang praktis sekaligus estetik!',
       'Small', 'Money, Artificial Flower', 'Cellophane', '30x25')">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFF3CC,#FFE580)">
-        <img loading="lazy" src="./foto/Money/money bouquet.webp" alt="Money Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Money/money bouquet.webp" alt="Money Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1284,7 +1303,7 @@
       'Buket uang yang disusun cantik dan rapi. Isi uang bisa disesuaikan. Hadiah yang praktis sekaligus estetik!',
       'Small', 'Money, Doll', 'Cellophane', '30x25')">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFF3CC,#FFE580)">
-        <img loading="lazy" src="./foto/Money/money bouquet 2.webp" alt="Money Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Money/money bouquet 2.webp" alt="Money Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1306,7 +1325,7 @@
       'Buket uang yang disusun cantik dan rapi. Isi uang bisa disesuaikan. Hadiah yang praktis sekaligus estetik!',
       'Small', 'Money, Pipe Flower', 'Cellophane', '30x25')">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFF3CC,#FFE580)">
-        <img loading="lazy" src="./foto/Money/money bouquet 3.webp" alt="Money Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Money/money bouquet 3.webp" alt="Money Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1330,7 +1349,7 @@
       'Large', 'Rose, Daisy, Anyelir, Filler ', 'Cellophane', '65x50'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img loading="lazy" src="./foto/Artificial/120-175k/artificial bouquet.webp" alt="Artificial Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Artificial/120-175k/artificial bouquet.webp" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1350,7 +1369,7 @@
       'Medium', 'Red Rose, White Rose ', 'Cellophane, Mesh', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img loading="lazy" src="./foto/Artificial/55k/artificial bouquet 2.webp" alt="Artificial Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Artificial/55k/artificial bouquet 2.webp" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1370,7 +1389,7 @@
       'Medium', 'Rose, Spiral pipe, Chocolate', 'Cellophane', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img loading="lazy" src="./foto/Artificial/35k/artificial bouquet 3.webp" alt="Artificial Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Artificial/35k/artificial bouquet 3.webp" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1390,7 +1409,7 @@
       'Medium', 'Rose, Spiral pipe, Two Chocolate', 'Cellophane', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img loading="lazy" src="./foto/Artificial/55k/artificial bouquet 4.webp" alt="Artificial Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Artificial/55k/artificial bouquet 4.webp" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1410,7 +1429,7 @@
       'Medium', 'Peony, Sunflower, Gerberra', 'Cellophane, Mesh', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img loading="lazy" src="./foto/Artificial/80k/artificial bouquet 5.webp" alt="Artificial Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Artificial/80k/artificial bouquet 5.webp" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1430,7 +1449,7 @@
       'Medium', 'Red Rose, Tiny Flower', 'Cellophane, Mesh', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img loading="lazy" src="./foto/Artificial/55k/artificial bouquet 6.webp" alt="Artificial Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Artificial/55k/artificial bouquet 6.webp" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1450,7 +1469,7 @@
       'Medium', 'Blue Rose, Anyelir, Spriral Pipe ', 'Cellophane, Mesh', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img loading="lazy" src="./foto/Artificial/55k/artificial bouquet 7.webp" alt="Artificial Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Artificial/55k/artificial bouquet 7.webp" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1470,7 +1489,7 @@
       'Small', 'Lily, Anyelir, Gerbera', 'Cellophane, Mesh', '30x25'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img loading="lazy" src="./foto/Artificial/35k/artificial bouquet 8.webp" alt="Artificial Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Artificial/35k/artificial bouquet 8.webp" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1490,7 +1509,7 @@
       'Medium', 'Red Gerbera, Tiny Flower', 'Cellophane, Mesh, Craft Paper', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img loading="lazy" src="./foto/Artificial/55k/artificial bouquet 9.webp" alt="Artificial Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Artificial/55k/artificial bouquet 9.webp" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1510,7 +1529,7 @@
       'Medium', 'Lily, Anyelir, Gerbera, Spiral Pipe', 'Cellophane, Mesh', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img loading="lazy" src="./foto/Artificial/55k/artificial bouquet 10.webp" alt="Artificial Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Artificial/55k/artificial bouquet 10.webp" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1530,7 +1549,7 @@
       'Medium', 'Brown Rose', 'Cellophane, Mesh', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img loading="lazy" src="./foto/Artificial/55k/artificial bouquet 11.webp" alt="Artificial Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Artificial/55k/artificial bouquet 11.webp" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1550,7 +1569,7 @@
       'Medium', 'Red Rose, Gerbera', 'Cellophane, Mesh', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img loading="lazy" src="./foto/Artificial/80k/artificial bouquet 12.webp" alt="Artificial Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Artificial/80k/artificial bouquet 12.webp" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1570,7 +1589,7 @@
       'Medium', 'Lily, Anthurium, Anyelir, Gerbera, Spiral Pipe', 'Cellophane Glass, Mesh', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img loading="lazy" src="./foto/Artificial/80k/artificial bouquet 13.webp" alt="Artificial Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Artificial/80k/artificial bouquet 13.webp" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1590,7 +1609,7 @@
       'Medium', 'Red Rose, White Rose', 'Cellophane Transparent, Crinkle', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img loading="lazy" src="./foto/Artificial/55k/artificial bouquet 14.webp" alt="Artificial Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Artificial/55k/artificial bouquet 14.webp" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1610,7 +1629,7 @@
       'Medium', 'Blue Rose, Daisy, Mini flower, Spiral Pipe', 'Cellophane, Mesh', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img loading="lazy" src="./foto/Artificial/60k/artificial bouquet 15.webp" alt="Artificial Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Artificial/60k/artificial bouquet 15.webp" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1630,7 +1649,7 @@
       'Medium', 'Rose, Anthurium, Anyelir, Gerbera, Rose Bud', 'Cellophane, Mesh', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img loading="lazy" src="./foto/Artificial/80k/artificial bouquet 16.webp" alt="Artificial Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Artificial/80k/artificial bouquet 16.webp" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1650,7 +1669,7 @@
       'Large', 'Rose, Mini Krisan, Baby Breath, Green Foliage', 'Cellophane, Mesh', '65x50'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img loading="lazy" src="./foto/Artificial/120-175k/artificial bouquet 17.webp" alt="Artificial Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Artificial/120-175k/artificial bouquet 17.webp" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1670,7 +1689,7 @@
       'Large', 'Anthurium, Rose, Gerbera, Mini flowers, Rose bud', 'Cellophane, Mesh', '65x50'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img loading="lazy" src="./foto/Artificial/120-175k/artificial bouquet 18.webp" alt="Artificial Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Artificial/120-175k/artificial bouquet 18.webp" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1690,7 +1709,7 @@
       'Medium', 'Rose, Gerbera', 'Cellophane Glass, Mesh', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img loading="lazy" src="./foto/Artificial/80k/artificial bouquet 19.webp" alt="Artificial Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Artificial/80k/artificial bouquet 19.webp" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1710,7 +1729,7 @@
       'Medium', 'Rose, Anyelir, Gerbera, Mini Flower', 'Mesh, Cellophane Glass', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img loading="lazy" src="./foto/Artificial/55k/artificial bouquet 20.webp" alt="Artificial Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Artificial/55k/artificial bouquet 20.webp" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1730,7 +1749,7 @@
       'Medium', 'Lily, Rose, Anthurium, Anyelir, Mini Flower', 'Cellophane, Mesh', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img loading="lazy" src="./foto/Artificial/60k/artificial bouquet 21.webp" alt="Artificial Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Artificial/60k/artificial bouquet 21.webp" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1750,7 +1769,7 @@
       'Medium', 'Rose, Lily, Anthurium, Mini Flower', 'Cellophane, Mesh', '40x35'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img loading="lazy" src="./foto/Artificial/60k/artificial bouquet 22.webp" alt="Artificial Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Artificial/60k/artificial bouquet 22.webp" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1770,7 +1789,7 @@
       'Large', 'Black Rose, Baby Breath, Dried Flower', 'Cellophane, Mesh', '65x50'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img loading="lazy" src="./foto/Artificial/120-175k/artificial bouquet 23.webp" alt="Artificial Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Artificial/120-175k/artificial bouquet 23.webp" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1790,7 +1809,7 @@
       'Single', 'Red Rose', 'Single Cello, Paper', '25x20'
       )">
       <div class="prod-img" style="background:linear-gradient(135deg,#E8D6FF,#D6B3FF)">
-        <img loading="lazy" src="./foto/Artificial/12-22k/artificial bouquet 24.webp" alt="Artificial Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Artificial/12-22k/artificial bouquet 24.webp" alt="Artificial Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1811,7 +1830,7 @@
       'Large', 'Toys,  Pipe Flower', 'Cellophane, Mesh', '65x50'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FF99CC)">
-        <img loading="lazy" src="./foto/Custom/80-120k/custom bouquet 1.webp" alt="Custom Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Custom/80-120k/custom bouquet 1.webp" alt="Custom Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1831,7 +1850,7 @@
       'Large', 'Toys, Snack, Pipe Flower', 'Cellophane, Mesh', '65x50'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FF99CC)">
-        <img loading="lazy" src="./foto/Custom/80-120k/custom bouquet 2.webp" alt="Custom Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Custom/80-120k/custom bouquet 2.webp" alt="Custom Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1851,7 +1870,7 @@
       'Tiny', 'Chocolate, Pipe Flowers', 'Cellophane', '25x20'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FF99CC)">
-        <img loading="lazy" src="./foto/Custom/12-22k/custom bouquet 3.webp" alt="Custom Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Custom/12-22k/custom bouquet 3.webp" alt="Custom Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1871,7 +1890,7 @@
       'Small', 'Pipe Flowers, Chocolate/Snacks', 'Cellophone', '30x25'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FF99CC)">
-        <img loading="lazy" src="./foto/Custom/35k/custom bouquet 4.webp" alt="Custom Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Custom/35k/custom bouquet 4.webp" alt="Custom Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1891,7 +1910,7 @@
       'Small', 'Marshmallow, Pipe Flowers', 'Sesuai desain', '30x25'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FF99CC)">
-        <img loading="lazy" src="./foto/Custom/35k/custom bouquet 5.webp" alt="Custom Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Custom/35k/custom bouquet 5.webp" alt="Custom Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1911,7 +1930,7 @@
       'Medium', 'Coffe, Artificial Flower', 'Cellophane, Mesh', '40x35'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FF99CC)">
-        <img loading="lazy" src="./foto/Custom/55k/custom bouquet 6.webp" alt="Custom Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Custom/55k/custom bouquet 6.webp" alt="Custom Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1931,7 +1950,7 @@
       'Large', 'Artificial Flower, Pipe Flower, Chocolate, Doll', 'Sesuai desain', '65x50'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FF99CC)">
-        <img loading="lazy" src="./foto/Custom/80-120k/custom bouquet 7.webp" alt="Custom Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Custom/80-120k/custom bouquet 7.webp" alt="Custom Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1951,7 +1970,7 @@
       'Medium', 'Pipe Flowers, Barca Logo', 'Cellophane, Mesh', '40x35'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FF99CC)">
-        <img loading="lazy" src="./foto/Custom/55k/custom bouquet 8.webp" alt="Custom Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Custom/55k/custom bouquet 8.webp" alt="Custom Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1971,7 +1990,7 @@
       'Large', 'Doll, Artificial Flower, Pipe Flower', 'Cellophane', '65x50'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FF99CC)">
-        <img loading="lazy" src="./foto/Custom/80-120k/custom bouquet 9.webp" alt="Custom Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Custom/80-120k/custom bouquet 9.webp" alt="Custom Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -1991,7 +2010,7 @@
       'Medium', 'Snacks, Candy, Artificial Flower', 'Cellophane', '40x35'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FF99CC)">
-        <img loading="lazy" src="./foto/Custom/55k/custom bouquet 10.webp" alt="Custom Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Custom/55k/custom bouquet 10.webp" alt="Custom Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -2011,7 +2030,7 @@
       'Small', 'Snacks, Pipe Flower', 'Cellophane', '30x25'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FF99CC)">
-        <img loading="lazy" src="./foto/Custom/35k/custom bouquet 11.webp" alt="Custom Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Custom/35k/custom bouquet 11.webp" alt="Custom Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -2031,7 +2050,7 @@
       'Large', 'Sesuai permintaan', 'Cellophane', '65x50'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FF99CC)">
-        <img loading="lazy" src="./foto/Custom/80-120k/custom bouquet 12.webp" alt="Custom Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Custom/80-120k/custom bouquet 12.webp" alt="Custom Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -2051,7 +2070,7 @@
       'Medium', 'Doll, Artificial Flower', 'Cellophane', '40x35'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FF99CC)">
-        <img loading="lazy" src="./foto/Custom/55k/custom bouquet 13.webp" alt="Custom Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Custom/55k/custom bouquet 13.webp" alt="Custom Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -2071,7 +2090,7 @@
       'Small', 'Snacks, Pipe Flower, Artificial Flower', 'Cellophane', '30x25'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FF99CC)">
-        <img loading="lazy" src="./foto/Custom/35k/custom bouquet 14.webp" alt="Custom Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Custom/35k/custom bouquet 14.webp" alt="Custom Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -2091,7 +2110,7 @@
       'Medium', 'Drink, Pipe Flower', 'Cellophane', '40x35'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FF99CC)">
-        <img loading="lazy" src="./foto/Custom/60k/custom bouquet 15.webp" alt="Custom Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Custom/60k/custom bouquet 15.webp" alt="Custom Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -2111,7 +2130,7 @@
       'Medium', 'Full snacks', 'Cellophane', '40x35'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FF99CC)">
-        <img loading="lazy" src="./foto/Custom/60k/custom bouquet 16.webp" alt="Custom Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Custom/60k/custom bouquet 16.webp" alt="Custom Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -2131,7 +2150,7 @@
       'Medium', 'Snacks, Drinks', 'Cellophane', '40x35'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FF99CC)">
-        <img loading="lazy" src="./foto/Custom/60k/custom bouquet 17.webp" alt="Custom Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Custom/60k/custom bouquet 17.webp" alt="Custom Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -2151,7 +2170,7 @@
       'Medium', 'Snacks, Chiki', 'Cellophane', '40x35'
     )">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFD6EC,#FF99CC)">
-        <img loading="lazy" src="./foto/Custom/60k/custom bouquet 18.webp" alt="Custom Bouquet">
+        <img width="400" height="500" loading="lazy" src="./foto/Custom/60k/custom bouquet 18.webp" alt="Custom Bouquet">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -2171,7 +2190,7 @@
       'Berbagai pilihan gift box dan souvenir cantik untuk melengkapi momen spesialmu. Bisa custom sesuai kebutuhan.',
       'Small', 'Candy, Pipe Love', 'Ziplock hologram', '7x10')">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFE0B3,#FFD080)">
-        <img loading="lazy" src="./foto/Gift/3-6k/gift 2.webp" alt="Gift & Souvenir">
+        <img width="400" height="500" loading="lazy" src="./foto/Gift/3-6k/gift 2.webp" alt="Gift & Souvenir">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -2190,7 +2209,7 @@
       'Berbagai pilihan gift box dan souvenir cantik untuk melengkapi momen spesialmu. Bisa custom sesuai kebutuhan.',
       'Small', 'Pipe Flowers Keychain', 'Thin plastics', '7x10')">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFE0B3,#FFD080)">
-        <img loading="lazy" src="./foto/Gift/3-6k/gift 4.webp" alt="Gift & Souvenir">
+        <img width="400" height="500" loading="lazy" src="./foto/Gift/3-6k/gift 4.webp" alt="Gift & Souvenir">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -2209,7 +2228,7 @@
       'Berbagai pilihan gift box dan souvenir cantik untuk melengkapi momen spesialmu. Bisa custom sesuai kebutuhan.',
       'Small', 'Pipe Lollipop Keychain', 'Thin plastics', '7x10')"> 
       <div class="prod-img" style="background:linear-gradient(135deg,#FFE0B3,#FFD080)">
-        <img loading="lazy" src="./foto/Gift/3-6k/gift 5.webp" alt="Gift & Souvenir">
+        <img width="400" height="500" loading="lazy" src="./foto/Gift/3-6k/gift 5.webp" alt="Gift & Souvenir">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -2228,7 +2247,7 @@
       'Berbagai pilihan gift box dan souvenir cantik untuk melengkapi momen spesialmu. Bisa custom sesuai kebutuhan.',
       'Small', 'Pipe SUnflower Keychain', 'Thin plastics', '7x10')">
       <div class="prod-img" style="background:linear-gradient(135deg,#FFE0B3,#FFD080)">
-        <img loading="lazy" src="./foto/Gift/3-6k/gift 6.webp" alt="Gift & Souvenir">
+        <img width="400" height="500" loading="lazy" src="./foto/Gift/3-6k/gift 6.webp" alt="Gift & Souvenir">
         <div class="prod-img-placeholder"><small></small></div>
       </div>
       <div class="prod-info">
@@ -2255,28 +2274,28 @@
       <div class="step">
         <div class="step-num">1</div>
         <div>
-          <h4>Pilih Produk</h4>
+          <h3>Pilih Produk</h3>
           <p>Lihat katalog kami dan tentukan produk yang kamu mau. Bisa juga cerita dulu konsep yang diinginkan!</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">2</div>
         <div>
-          <h4>Chat via WhatsApp</h4>
+          <h3>Chat via WhatsApp</h3>
           <p>Hubungi kami via WA, sebutkan nama produk, ukuran, warna, dan tanggal dibutuhkan.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">3</div>
         <div>
-          <h4>Konfirmasi & Bayar</h4>
+          <h3>Konfirmasi & Bayar</h3>
           <p>Kami kirim total harga. Pembayaran via transfer bank, e-wallet, atau QRIS.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">4</div>
         <div>
-          <h4>Proses & Pick Up</h4>
+          <h3>Proses & Pick Up</h3>
           <p>Pengerjaan 2–3 hari. Ambil di Seracoliving 36 atau gosend/lalamove (biaya ditanggung pembeli).</p>
         </div>
       </div>
@@ -2351,7 +2370,7 @@
             <div class="qris-card">
               
               <div class="qris-img-wrap">
-                  <img src="./foto/Others/qris.png" alt="QRIS Bloomerry">
+                  <img width="300" height="300" src="./foto/Others/qris.png" alt="QRIS Bloomerry">
               </div>
               <div style="text-align: center; margin-top: 8px; margin-bottom: 4px;">
                   <button onclick="downloadQRIS(event)" style="background: var(--pink); color: white; padding: 6px 16px; border: none; border-radius: 2rem; font-family: 'Nunito', sans-serif; font-size: 0.85rem; font-weight: 700; cursor: pointer; transition: background 0.2s;">
@@ -2399,7 +2418,7 @@
         <span class="testi-wa-label">WhatsApp Chat</span>
       </div>
       <div class="testi-wa-img-wrap">
-        <img loading="lazy" src="./foto/Testimoni/Testimoni 1.jpg" alt="Testimoni 1">
+        <img width="400" height="640" loading="lazy" src="./foto/Testimoni/Testimoni 1.jpg" alt="Testimoni 1">
         <div class="testi-wa-img-placeholder">
         </div>
       </div>
@@ -2411,7 +2430,7 @@
         <span class="testi-wa-label">WhatsApp Chat</span>
       </div>
       <div class="testi-wa-img-wrap">
-        <img loading="lazy" src="./foto/Testimoni/Testimoni 2.jpg" alt="Testimoni 2">
+        <img width="400" height="640" loading="lazy" src="./foto/Testimoni/Testimoni 2.jpg" alt="Testimoni 2">
         <div class="testi-wa-img-placeholder">
         </div>
       </div>
@@ -2423,7 +2442,7 @@
         <span class="testi-wa-label">WhatsApp Chat</span>
       </div>
       <div class="testi-wa-img-wrap">
-        <img loading="lazy" src="./foto/Testimoni/Testimoni 3.jpg" alt="Testimoni 3">
+        <img width="400" height="640" loading="lazy" src="./foto/Testimoni/Testimoni 3.jpg" alt="Testimoni 3">
         <div class="testi-wa-img-placeholder">
         </div>
       </div>
@@ -2435,7 +2454,7 @@
         <span class="testi-wa-label">WhatsApp Chat</span>
       </div>
       <div class="testi-wa-img-wrap">
-        <img loading="lazy" src="./foto/Testimoni/Testimoni 4.jpg" alt="Testimoni 4">
+        <img width="400" height="640" loading="lazy" src="./foto/Testimoni/Testimoni 4.jpg" alt="Testimoni 4">
         <div class="testi-wa-img-placeholder">
         </div>
       </div>
@@ -2447,7 +2466,7 @@
         <span class="testi-wa-label">WhatsApp Chat</span>
       </div>
       <div class="testi-wa-img-wrap">
-        <img loading="lazy" src="./foto/Testimoni/Testimoni 5.jpg" alt="Testimoni 5">
+        <img width="400" height="640" loading="lazy" src="./foto/Testimoni/Testimoni 5.jpg" alt="Testimoni 5">
         <div class="testi-wa-img-placeholder">
         </div>
       </div>
@@ -2459,7 +2478,7 @@
         <span class="testi-wa-label">WhatsApp Chat</span>
       </div>
       <div class="testi-wa-img-wrap">
-        <img loading="lazy" src="./foto/Testimoni/Testimoni 6.jpg" alt="Testimoni 6">
+        <img width="400" height="640" loading="lazy" src="./foto/Testimoni/Testimoni 6.jpg" alt="Testimoni 6">
         <div class="testi-wa-img-placeholder">
         </div>
       </div>
@@ -2474,27 +2493,27 @@
   <h2 class="sec-title">Lokasi & <span>Sosmed</span> 📍</h2>
   <div class="lokasi-wrap">
     <div class="map-box">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d986.3634623240869!2d106.8068843688561!3d-6.591808227644979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c50039de2da9%3A0xaf178da69997d371!2sseracoliving%2036!5e0!3m2!1sen!2sid!4v1778488622416!5m2!1sen!2sid" style="border:0;width:100%;height:100%;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d986.3634623240869!2d106.8068843688561!3d-6.591808227644979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c50039de2da9%3A0xaf178da69997d371!2sseracoliving%2036!5e0!3m2!1sen!2sid!4v1778488622416!5m2!1sen!2sid" style="border:0;width:100%;height:100%;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Peta Lokasi Bloomerry Bogor"></iframe>
     </div>
     <div class="lokasi-info">
       <div class="loc-card">
         <div class="loc-icon">📍</div>
         <div class="loc-text">
-          <h4>Alamat Toko</h4>
+          <h3>Alamat Toko</h3>
           <p>Jl. Sancang No.22, RT.03/RW.07<br>Babakan, Kec. Bogor Tengah<br>Kota Bogor, Jawa Barat 16128</p>
         </div>
       </div>
       <div class="loc-card">
         <div class="loc-icon">🕐</div>
         <div class="loc-text">
-          <h4>Jam Buka</h4>
+          <h3>Jam Buka</h3>
           <p>Senin – Minggu: 09.00 – 18.00</p>
         </div>
       </div>
       <div class="loc-card">
         <div class="loc-icon">📱</div>
         <div class="loc-text">
-          <h4>Ikuti Bloomerry</h4>
+          <h3>Ikuti Bloomerry</h3>
           <div class="sosmed-row">
             <a href="https://instagram.com/bloomerry.flo" class="sosmed-btn s-ig" target="_blank">📸 Instagram</a>
             <a href="https://wa.me/6281515695526" class="sosmed-btn s-wa" target="_blank">💬 WA</a>
@@ -2506,6 +2525,7 @@
 </section>
 
 <!-- ─── FOOTER ─── -->
+</main>
 <footer>
   <p>© 2026 <span>Bloomerry</span> — Let's Bloom Every Day 🌸<br>
   Bogor, Jawa Barat</p>
@@ -2531,7 +2551,7 @@
   </div>
 </div>
 
-<script src="bloomerry.js"></script>
+<script src="bloomerry.js" defer></script>
 
 <!-- ─── FLOATING WA BUTTON ─── -->
 <a href="https://wa.me/6281515695526" class="float-wa" target="_blank" aria-label="Order via WhatsApp">💬</a>
